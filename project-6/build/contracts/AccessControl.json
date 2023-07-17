@@ -1,0 +1,750 @@
+{
+  "contractName": "AccessControl",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isRetailer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceConsumer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addDistributor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceFarmer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isConsumer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isDistributor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isFarmer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceRetailer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "ConsumerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RetailerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "DistributorRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "FarmerRemoved",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addConsumer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isRetailer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceConsumer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceFarmer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isConsumer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addRetailer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isDistributor\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceRetailer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ConsumerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ConsumerRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"RetailerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"RetailerRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"FarmerRemoved\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/coffeeaccesscontrol/AccessControl.sol\":\"AccessControl\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/coffeeaccesscontrol/AccessControl.sol\":{\"keccak256\":\"0x72180250806ba12767a9898522fe663b8a1461dae6a2ba8370df14715ac09c03\",\"urls\":[\"bzzr://d58fc547c39c04b9ae0d6149d417c539960a6b606d3997b81d359e419901eb61\"]},\"project:/contracts/coffeeaccesscontrol/ConsumerRole.sol\":{\"keccak256\":\"0x78048d61a6c2ffcdd5e85f06f4f6e47d34866accf8840bd1b221c9944d1fff3a\",\"urls\":[\"bzzr://f3392a05848787e8098b265f4e13cf65b530e20b2c68e38c6b6a0c435d1af730\"]},\"project:/contracts/coffeeaccesscontrol/DistributorRole.sol\":{\"keccak256\":\"0x5be6e550ca729df1e6e5c2f0c1a35c3b12fc4460546a676d7c67babb834330bd\",\"urls\":[\"bzzr://6fd14c687fba8c0a2d6102b3dace2565743803503017c752e549a57e804faa39\"]},\"project:/contracts/coffeeaccesscontrol/FarmerRole.sol\":{\"keccak256\":\"0xb853b24299155764311339a860afa24f1e7d4ab5d2e14629b6f70f77af55e843\",\"urls\":[\"bzzr://7852597e31ae908704fc3bf4eea0e35ddd8bfd0c675e2497810127a0595fef6e\"]},\"project:/contracts/coffeeaccesscontrol/RetailerRole.sol\":{\"keccak256\":\"0xd4e15fad133521efa3120223ac68e0cc42887ac22eb3ca6aafcac53bce3f9690\",\"urls\":[\"bzzr://202c36a67f8af9386c35ce9965e1e213b83208c6ec6b4fb20573d68de127f078\"]},\"project:/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0xe21510b1682b09db6e084f37f3827a41e8cf1d665211f272188ea18a1ba39744\",\"urls\":[\"bzzr://1a0a468468ff1514572ccd790902c7754900ca01df191cd4d713a7a592ef6bd3\"]}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b506200002c3362000080640100000000026401000000009004565b6200004633620000ea640100000000026401000000009004565b620000603362000154640100000000026401000000009004565b6200007a33620001be640100000000026401000000009004565b62000380565b620000a4816000620002286401000000000262000a53179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b6200010e816001620002286401000000000262000a53179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b62000178816002620002286401000000000262000a53179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b620001e2816003620002286401000000000262000a53179091906401000000009004565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156200026557600080fd5b620002808282620002eb640100000000026401000000009004565b1515156200028d57600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156200032957600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610bde80620003906000396000f3006080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063112940f9146100bf5780635da09b881461010257806361e6982d1461015d578063644241db146101745780637250e2241461018b57806380c3f96d146101ce57806380fc0ce414610211578063834ff739146102285780638ec4f505146102835780638f0c86fa146102c6578063b942906914610321578063db0e6a2f1461037c575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610393565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610442565b604051808215151515815260200191505060405180910390f35b34801561016957600080fd5b5061017261045f565b005b34801561018057600080fd5b5061018961046a565b005b34801561019757600080fd5b506101cc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610475565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610524565b005b34801561021d57600080fd5b506102266105d3565b005b34801561023457600080fd5b50610269600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105de565b604051808215151515815260200191505060405180910390f35b34801561028f57600080fd5b506102c4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105fb565b005b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106aa565b604051808215151515815260200191505060405180910390f35b34801561032d57600080fd5b50610362600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106c7565b604051808215151515815260200191505060405180910390f35b34801561038857600080fd5b506103916106e4565b005b61039c336105de565b1515610436576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f4f6e6c7920636f6e73756d6572732063616e2063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61043f816106ef565b50565b600061045882600261074990919063ffffffff16565b9050919050565b610468336107dd565b565b61047333610837565b565b61047e336106aa565b1515610518576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f4f6e6c79206469737472696275746f72732063616e2063616c6c20746869732081526020017f66756e6374696f6e00000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61052181610891565b50565b61052d336106c7565b15156105c7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4f6e6c79206661726d6572732063616e2063616c6c20746869732066756e637481526020017f696f6e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6105d0816108eb565b50565b6105dc33610945565b565b60006105f482600361074990919063ffffffff16565b9050919050565b61060433610442565b151561069e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f4f6e6c792072657461696c6572732063616e2063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6106a78161099f565b50565b60006106c082600161074990919063ffffffff16565b9050919050565b60006106dd82600061074990919063ffffffff16565b9050919050565b6106ed336109f9565b565b610703816003610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561078657600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6107f1816003610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61084b816001610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6108a5816001610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b6108ff816000610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b610959816000610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6109b3816002610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b610a0d816002610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610a8f57600080fd5b610a998282610749565b151515610aa557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610b3f57600080fd5b610b498282610749565b1515610b5457600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820de7e8b0f0c9b71876bc19c33a9a1ece692b867bb16d15f133d6c2b5eded61e380029",
+  "deployedBytecode": "0x6080604052600436106100ba576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063112940f9146100bf5780635da09b881461010257806361e6982d1461015d578063644241db146101745780637250e2241461018b57806380c3f96d146101ce57806380fc0ce414610211578063834ff739146102285780638ec4f505146102835780638f0c86fa146102c6578063b942906914610321578063db0e6a2f1461037c575b600080fd5b3480156100cb57600080fd5b50610100600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610393565b005b34801561010e57600080fd5b50610143600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610442565b604051808215151515815260200191505060405180910390f35b34801561016957600080fd5b5061017261045f565b005b34801561018057600080fd5b5061018961046a565b005b34801561019757600080fd5b506101cc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610475565b005b3480156101da57600080fd5b5061020f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610524565b005b34801561021d57600080fd5b506102266105d3565b005b34801561023457600080fd5b50610269600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105de565b604051808215151515815260200191505060405180910390f35b34801561028f57600080fd5b506102c4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105fb565b005b3480156102d257600080fd5b50610307600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106aa565b604051808215151515815260200191505060405180910390f35b34801561032d57600080fd5b50610362600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106c7565b604051808215151515815260200191505060405180910390f35b34801561038857600080fd5b506103916106e4565b005b61039c336105de565b1515610436576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f4f6e6c7920636f6e73756d6572732063616e2063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61043f816106ef565b50565b600061045882600261074990919063ffffffff16565b9050919050565b610468336107dd565b565b61047333610837565b565b61047e336106aa565b1515610518576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f4f6e6c79206469737472696275746f72732063616e2063616c6c20746869732081526020017f66756e6374696f6e00000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b61052181610891565b50565b61052d336106c7565b15156105c7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4f6e6c79206661726d6572732063616e2063616c6c20746869732066756e637481526020017f696f6e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6105d0816108eb565b50565b6105dc33610945565b565b60006105f482600361074990919063ffffffff16565b9050919050565b61060433610442565b151561069e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260258152602001807f4f6e6c792072657461696c6572732063616e2063616c6c20746869732066756e81526020017f6374696f6e00000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b6106a78161099f565b50565b60006106c082600161074990919063ffffffff16565b9050919050565b60006106dd82600061074990919063ffffffff16565b9050919050565b6106ed336109f9565b565b610703816003610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee0714260405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561078657600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b6107f1816003610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f09860405160405180910390a250565b61084b816001610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6108a5816001610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b6108ff816000610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd060405160405180910390a250565b610959816000610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f260405160405180910390a250565b6109b3816002610a5390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f71ae26cad02663e3d92efd6ec56031a80d74a20c0ab4183faa8bf262261c9baa60405160405180910390a250565b610a0d816002610b0390919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fdb7176e79cffef81cb01767dd0447a0b24bb72ca9778d4b245581086b2a7e6db60405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610a8f57600080fd5b610a998282610749565b151515610aa557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610b3f57600080fd5b610b498282610749565b1515610b5457600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050505600a165627a7a72305820de7e8b0f0c9b71876bc19c33a9a1ece692b867bb16d15f133d6c2b5eded61e380029",
+  "sourceMap": "201:236:1:-;;;290:144;8:9:-1;5:2;;;30:1;27;20:12;5:2;290:144:1;585:22:4;596:10;585;;;:22;;;:::i;:::-;620:27:3;636:10;620:15;;;:27;;;:::i;:::-;599:24:5;612:10;599:12;;;:24;;;:::i;:::-;::2;612:10;599:12;;;:24;;;:::i;:::-;201:236:1;;1330:108:4;1382:20;1394:7;1382;:11;;;;;;:20;;;;;:::i;:::-;1425:7;1413:20;;;;;;;;;;;;1330:108;:::o;1445:123:3:-;1502:25;1519:7;1502:12;:16;;;;;;:25;;;;;:::i;:::-;1555:7;1538:25;;;;;;;;;;;;1445:123;:::o;1376:114:5:-;1430:22;1444:7;1430:9;:13;;;;;;:22;;;;;:::i;:::-;1477:7;1463:22;;;;;;;;;;;;1376:114;:::o;::2:-;1430:22;1444:7;1430:9;:13;;;;;;:22;;;;;:::i;:::-;1477:7;1463:22;;;;;;;;;;;;1376:114;:::o;244:167:6:-;335:1;316:21;;:7;:21;;;;308:30;;;;;;;;353:18;357:4;363:7;353:3;;;:18;;;:::i;:::-;352:19;344:28;;;;;;;;402:4;379;:11;;:20;391:7;379:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;244:167;;:::o;725:166::-;809:4;850:1;831:21;;:7;:21;;;;823:30;;;;;;;;866:4;:11;;:20;878:7;866:20;;;;;;;;;;;;;;;;;;;;;;;;;859:27;;725:166;;;;:::o;201:236:1:-;;;;;;;",
+  "deployedSourceMap": "201:236:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1051:90:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1051:90:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;886:104:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;886:104:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1209:73:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1209:73:2;;;;;;1266:79:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1266:79:3;;;;;;1096:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1096:99:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;1021:84:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1021:84:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1171:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1171:69:4;;;;;;886:104:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;886:104:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1051:90:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1051:90:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;922:110:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;922:110:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;862:100:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;862:100:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1209:73:5;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1209:73:5;;;;;;1051:90:2;751:22;762:10;751;:22::i;:::-;743:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1115:21;1128:7;1115:12;:21::i;:::-;1051:90;:::o;886:104:5:-;944:4;963:22;977:7;963:9;:13;;:22;;;;:::i;:::-;956:29;;886:104;;;:::o;1209:73:2:-;1250:27;1266:10;1250:15;:27::i;:::-;1209:73::o;1266:79:3:-;1310:30;1329:10;1310:18;:30::i;:::-;1266:79::o;1096:99::-;778:25;792:10;778:13;:25::i;:::-;770:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1166:24;1182:7;1166:15;:24::i;:::-;1096:99;:::o;1021:84:4:-;733:20;742:10;733:8;:20::i;:::-;725:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1081:19;1092:7;1081:10;:19::i;:::-;1021:84;:::o;1171:69::-;1210:25;1224:10;1210:13;:25::i;:::-;1171:69::o;886:104:2:-;944:4;963:22;977:7;963:9;:13;;:22;;;;:::i;:::-;956:29;;886:104;;;:::o;1051:90:5:-;751:22;762:10;751;:22::i;:::-;743:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1115:21;1128:7;1115:12;:21::i;:::-;1051:90;:::o;922:110:3:-;983:4;1002:25;1019:7;1002:12;:16;;:25;;;;:::i;:::-;995:32;;922:110;;;:::o;862:100:4:-;918:4;937:20;949:7;937;:11;;:20;;;;:::i;:::-;930:27;;862:100;;;:::o;1209:73:5:-;1250:27;1266:10;1250:15;:27::i;:::-;1209:73::o;1376:114:2:-;1430:22;1444:7;1430:9;:13;;:22;;;;:::i;:::-;1477:7;1463:22;;;;;;;;;;;;1376:114;:::o;725:166:6:-;809:4;850:1;831:21;;:7;:21;;;;823:30;;;;;;;;866:4;:11;;:20;878:7;866:20;;;;;;;;;;;;;;;;;;;;;;;;;859:27;;725:166;;;;:::o;1595:122:2:-;1652:25;1669:7;1652:9;:16;;:25;;;;:::i;:::-;1704:7;1688:24;;;;;;;;;;;;1595:122;:::o;1679:131:3:-;1739:28;1759:7;1739:12;:19;;:28;;;;:::i;:::-;1797:7;1778:27;;;;;;;;;;;;1679:131;:::o;1445:123::-;1502:25;1519:7;1502:12;:16;;:25;;;;:::i;:::-;1555:7;1538:25;;;;;;;;;;;;1445:123;:::o;1330:108:4:-;1382:20;1394:7;1382;:11;;:20;;;;:::i;:::-;1425:7;1413:20;;;;;;;;;;;;1330:108;:::o;1539:116::-;1594:23;1609:7;1594;:14;;:23;;;;:::i;:::-;1642:7;1628:22;;;;;;;;;;;;1539:116;:::o;1376:114:5:-;1430:22;1444:7;1430:9;:13;;:22;;;;:::i;:::-;1477:7;1463:22;;;;;;;;;;;;1376:114;:::o;1595:122::-;1652:25;1669:7;1652:9;:16;;:25;;;;:::i;:::-;1704:7;1688:24;;;;;;;;;;;;1595:122;:::o;244:167:6:-;335:1;316:21;;:7;:21;;;;308:30;;;;;;;;353:18;357:4;363:7;353:3;:18::i;:::-;352:19;344:28;;;;;;;;402:4;379;:11;;:20;391:7;379:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;244:167;;:::o;477:170::-;571:1;552:21;;:7;:21;;;;544:30;;;;;;;;588:18;592:4;598:7;588:3;:18::i;:::-;580:27;;;;;;;;637:5;614:4;:11;;:20;626:7;614:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;477:170;;:::o",
+  "source": "pragma solidity ^0.4.24;\r\n\r\n// Importe as bibliotecas dos diferentes papéis\r\nimport \"./FarmerRole.sol\";\r\nimport \"./DistributorRole.sol\";\r\nimport \"./RetailerRole.sol\";\r\nimport \"./ConsumerRole.sol\";\r\n\r\ncontract AccessControl is FarmerRole, DistributorRole, RetailerRole, ConsumerRole {\r\n    constructor() public {\r\n        // O construtor do CoffeeAccessControl pode estar vazio ou conter qualquer lógica adicional necessária.\r\n    }\r\n}\r\n",
+  "sourcePath": "/home/gcastro/dev/personal/github/udacity-blockchain-architecture/project-6/contracts/coffeeaccesscontrol/AccessControl.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/coffeeaccesscontrol/AccessControl.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        75
+      ]
+    },
+    "id": 76,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "project:/contracts/coffeeaccesscontrol/FarmerRole.sol",
+        "file": "./FarmerRole.sol",
+        "id": 59,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 388,
+        "src": "78:26:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/coffeeaccesscontrol/DistributorRole.sol",
+        "file": "./DistributorRole.sol",
+        "id": 60,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 284,
+        "src": "106:31:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/coffeeaccesscontrol/RetailerRole.sol",
+        "file": "./RetailerRole.sol",
+        "id": 61,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 492,
+        "src": "139:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/coffeeaccesscontrol/ConsumerRole.sol",
+        "file": "./ConsumerRole.sol",
+        "id": 62,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 180,
+        "src": "169:28:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 63,
+              "name": "FarmerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 387,
+              "src": "227:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FarmerRole_$387",
+                "typeString": "contract FarmerRole"
+              }
+            },
+            "id": 64,
+            "nodeType": "InheritanceSpecifier",
+            "src": "227:10:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 65,
+              "name": "DistributorRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 283,
+              "src": "239:15:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DistributorRole_$283",
+                "typeString": "contract DistributorRole"
+              }
+            },
+            "id": 66,
+            "nodeType": "InheritanceSpecifier",
+            "src": "239:15:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 67,
+              "name": "RetailerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 491,
+              "src": "256:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RetailerRole_$491",
+                "typeString": "contract RetailerRole"
+              }
+            },
+            "id": 68,
+            "nodeType": "InheritanceSpecifier",
+            "src": "256:12:1"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 69,
+              "name": "ConsumerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 179,
+              "src": "270:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ConsumerRole_$179",
+                "typeString": "contract ConsumerRole"
+              }
+            },
+            "id": 70,
+            "nodeType": "InheritanceSpecifier",
+            "src": "270:12:1"
+          }
+        ],
+        "contractDependencies": [
+          179,
+          283,
+          387,
+          491
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 75,
+        "linearizedBaseContracts": [
+          75,
+          179,
+          491,
+          283,
+          387
+        ],
+        "name": "AccessControl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "311:123:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 74,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "301:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "311:0:1"
+            },
+            "scope": 75,
+            "src": "290:144:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 76,
+        "src": "201:236:1"
+      }
+    ],
+    "src": "0:439:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/coffeeaccesscontrol/AccessControl.sol",
+      "exportedSymbols": {
+        "AccessControl": [
+          75
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".24"
+          ]
+        },
+        "id": 58,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 388,
+          "absolutePath": "project:/contracts/coffeeaccesscontrol/FarmerRole.sol",
+          "file": "./FarmerRole.sol",
+          "scope": 76,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 59,
+        "name": "ImportDirective",
+        "src": "78:26:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 284,
+          "absolutePath": "project:/contracts/coffeeaccesscontrol/DistributorRole.sol",
+          "file": "./DistributorRole.sol",
+          "scope": 76,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 60,
+        "name": "ImportDirective",
+        "src": "106:31:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 492,
+          "absolutePath": "project:/contracts/coffeeaccesscontrol/RetailerRole.sol",
+          "file": "./RetailerRole.sol",
+          "scope": 76,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 61,
+        "name": "ImportDirective",
+        "src": "139:28:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 180,
+          "absolutePath": "project:/contracts/coffeeaccesscontrol/ConsumerRole.sol",
+          "file": "./ConsumerRole.sol",
+          "scope": 76,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 62,
+        "name": "ImportDirective",
+        "src": "169:28:1"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            179,
+            283,
+            387,
+            491
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            75,
+            179,
+            491,
+            283,
+            387
+          ],
+          "name": "AccessControl",
+          "scope": 76
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "FarmerRole",
+                  "referencedDeclaration": 387,
+                  "type": "contract FarmerRole"
+                },
+                "id": 63,
+                "name": "UserDefinedTypeName",
+                "src": "227:10:1"
+              }
+            ],
+            "id": 64,
+            "name": "InheritanceSpecifier",
+            "src": "227:10:1"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "DistributorRole",
+                  "referencedDeclaration": 283,
+                  "type": "contract DistributorRole"
+                },
+                "id": 65,
+                "name": "UserDefinedTypeName",
+                "src": "239:15:1"
+              }
+            ],
+            "id": 66,
+            "name": "InheritanceSpecifier",
+            "src": "239:15:1"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "RetailerRole",
+                  "referencedDeclaration": 491,
+                  "type": "contract RetailerRole"
+                },
+                "id": 67,
+                "name": "UserDefinedTypeName",
+                "src": "256:12:1"
+              }
+            ],
+            "id": 68,
+            "name": "InheritanceSpecifier",
+            "src": "256:12:1"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ConsumerRole",
+                  "referencedDeclaration": 179,
+                  "type": "contract ConsumerRole"
+                },
+                "id": 69,
+                "name": "UserDefinedTypeName",
+                "src": "270:12:1"
+              }
+            ],
+            "id": 70,
+            "name": "InheritanceSpecifier",
+            "src": "270:12:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "payable": false,
+              "scope": 75,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 71,
+                "name": "ParameterList",
+                "src": "301:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 72,
+                "name": "ParameterList",
+                "src": "311:0:1"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 73,
+                "name": "Block",
+                "src": "311:123:1"
+              }
+            ],
+            "id": 74,
+            "name": "FunctionDefinition",
+            "src": "290:144:1"
+          }
+        ],
+        "id": 75,
+        "name": "ContractDefinition",
+        "src": "201:236:1"
+      }
+    ],
+    "id": 76,
+    "name": "SourceUnit",
+    "src": "0:439:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-07-15T18:34:45.417Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
