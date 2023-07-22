@@ -1,124 +1,37 @@
 https://sepolia.etherscan.io/address/0x6c176eedd0325d6ddfcdcf2cb1e6fe440f26115a
 
-FarmerRole: 0x91f47b18d0ebf9b4589eafa4fedc30e1885b0012
+FarmerRole: 0xC5A29C5608041A2A94417E85358FB8bf61A036A1
 
-DistributorRole: 0x8091f86e614735480bb4989560a2ff98eab5f824
+DistributorRole: 0xd5Ac2A08562ca9B28cfAE81B7D99819A3f6345cc
 
-RetailerRole: 0x63fcfeb27586924a949e5cf32ba2931d73d1cdab
+RetailerRole: 0xde45B08968262c75B44AF980a349cC8b24AFf86D
 
-ConsumerRole: 0x0ca1af1ac6a710c83b74a3b7b3c11d2268ebf70d
+ConsumerRole: 0xb81D2c84f2F80cb39Bc650eC7414AD9DD30A7243
 
-SupplyChain: 0xa8de0991f3e2f2250c30366a550e235181d12881
+SupplyChain: 0x580D057BFf421494615dA26547a0e773578e41d2
 
-# Supply chain & data auditing
+## Libraries
+* Truffle : `v5.2.5`: A development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier
+* Web3.js: `v1.2.1`: A collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+* IPFS Not used!
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+## UML Diagrams
+### Activity Diagram
+![Activity diagram.](/uml-pictures/activity.png)
 
-The DApp User Interface when running should look like...
+### Sequence Diagram
+![Sequence diagram.](/uml-pictures/sequence.png)
 
-![truffle test](images/ftc_product_overview.png)
+### State Diagram
+![State diagram.](/uml-pictures/state.png?raw=true)
 
-![truffle test](images/ftc_farm_details.png)
-
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
-
-```
-Give examples (to be clarified)
-```
-
-### Installing
-
-> The starter code is written for **Solidity v0.4.24**. At the time of writing, the current Truffle v5 comes with Solidity v0.5 that requires function *mutability* and *visibility* to be specified (please refer to Solidity [documentation](https://docs.soliditylang.org/en/v0.5.0/050-breaking-changes.html) for more details). To use this starter code, please run `npm i -g truffle@4.1.14` to install Truffle v4 with Solidity v0.4.24. 
-
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
+### Class (Data Model) Diagram
+![Model diagram.](/uml-pictures/model.png?raw=true)
 
 
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
-
-## Acknowledgments
-
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+## Docs
+### Requirements
+1. ganache-cli
+2. truffle
+3. metamask
+4. infura account

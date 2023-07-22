@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "ethjs-abi": "^0.2.1",
+    "truffle": "^5.11.0",
     "truffle-blockchain-utils": "^0.0.10",
     "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.2.1"
