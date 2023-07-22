@@ -1,3 +1,15 @@
+https://sepolia.etherscan.io/address/0x6c176eedd0325d6ddfcdcf2cb1e6fe440f26115a
+
+FarmerRole: 0x91f47b18d0ebf9b4589eafa4fedc30e1885b0012
+
+DistributorRole: 0x8091f86e614735480bb4989560a2ff98eab5f824
+
+RetailerRole: 0x63fcfeb27586924a949e5cf32ba2931d73d1cdab
+
+ConsumerRole: 0x0ca1af1ac6a710c83b74a3b7b3c11d2268ebf70d
+
+SupplyChain: 0xa8de0991f3e2f2250c30366a550e235181d12881
+
 # Supply chain & data auditing
 
 This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
